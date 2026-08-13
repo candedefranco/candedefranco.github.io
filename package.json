@@ -1,0 +1,14 @@
+{
+  "name": "candedefranco-portfolio",
+  "private": true,
+  "scripts": {
+    "dev": "hugo server",
+    "build": "hugo --minify"
+  },
+  "devDependencies": {
+    "tailwindcss": "3.4.17",
+    "postcss": "8.4.49",
+    "postcss-cli": "11.0.0",
+    "autoprefixer": "10.4.20"
+  }
+}

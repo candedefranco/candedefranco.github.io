@@ -1,0 +1,16 @@
+baseURL = "https://candedefranco.github.io/"
+languageCode = "es"
+title = "Cande De Franco"
+
+[build]
+  [build.buildStats]
+    enable = true
+
+[module]
+  [module.hugoVersion]
+    extended = true
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
