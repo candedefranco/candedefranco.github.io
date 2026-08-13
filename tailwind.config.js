@@ -8,16 +8,12 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sora: ['Sora', 'system-ui', 'sans-serif'],
-        mono: ['JetBrains Mono', 'Fira Code', 'monospace'],
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+        mono: ['JetBrains Mono', 'monospace'],
       },
       colors: {
         bg: '#0F172A',
         surface: '#1E293B',
-        'surface-elevated': '#334155',
-      },
-      letterSpacing: {
-        label: '3px',
       },
     },
   },
