@@ -12,7 +12,7 @@ module.exports = {
         mono: ['JetBrains Mono', 'monospace'],
       },
       colors: {
-        bg: '#0F172A',
+        bg: '#000000',
         surface: '#1E293B',
       },
     },
