@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -38,6 +38,18 @@
 
     // Auto-advance every 4s
     setInterval(function() { moveCarousel(1); }, 4000);
+
+    // Language toggle
+    let currentLang = 'en';
+
+    function toggleLang() {
+      currentLang = currentLang === 'en' ? 'es' : 'en';
+      document.getElementById('lang-btn').textContent = currentLang === 'en' ? 'ES' : 'EN';
+      document.querySelectorAll('[data-en]').forEach(function(el) {
+        el.textContent = el.getAttribute('data-' + currentLang);
+      });
+      document.documentElement.lang = currentLang === 'en' ? 'en' : 'es';
+    }
   </script>
 </body>
 </html>

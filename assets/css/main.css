@@ -109,4 +109,21 @@
   .dot-active {
     background: #38bdf8;
   }
+
+  .lang-toggle {
+    background: #1e293b;
+    border: 1px solid #334155;
+    color: #38bdf8;
+    padding: 0.4rem 0.75rem;
+    border-radius: 0.375rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: border-color 0.2s, background 0.2s;
+    font-family: 'JetBrains Mono', monospace;
+  }
+  .lang-toggle:hover {
+    border-color: #38bdf8;
+    background: rgba(56, 189, 248, 0.08);
+  }
 }
