@@ -1,39 +1,129 @@
 {{ define "main" }}
-<main class="max-w-2xl w-full mx-auto px-6 md:px-8 py-16 md:py-24">
+<main class="max-w-3xl w-full mx-auto px-6 md:px-8 py-16 md:py-24">
 
   <!-- Header -->
-  <header class="mb-10">
+  <header class="mb-12">
     <p class="font-mono text-cyan-400 text-sm mb-2">$ whoami</p>
     <h1 class="text-5xl md:text-6xl font-bold font-mono mb-3">Cande De Franco</h1>
     <p class="text-lg text-slate-400">Desarrolladora. Código limpio, interfaces que no molestan.</p>
   </header>
 
   <!-- Skills -->
-  <section class="mb-10" aria-label="Tecnologías">
+  <section class="mb-12" aria-label="Tecnologías">
     <div class="flex flex-wrap gap-2">
-      <span class="bg-surface border border-slate-700 px-3 py-1 rounded text-sm text-cyan-400">Tech 1</span>
-      <span class="bg-surface border border-slate-700 px-3 py-1 rounded text-sm text-cyan-400">Tech 2</span>
-      <span class="bg-surface border border-slate-700 px-3 py-1 rounded text-sm text-cyan-400">Tech 3</span>
-      <span class="bg-surface border border-slate-700 px-3 py-1 rounded text-sm text-violet-400">Tool 1</span>
-      <span class="bg-surface border border-slate-700 px-3 py-1 rounded text-sm text-violet-400">Tool 2</span>
-      <span class="bg-surface border border-slate-700 px-3 py-1 rounded text-sm text-violet-400">Tool 3</span>
+      <span class="bg-surface border border-slate-700 px-3 py-1 rounded text-sm text-cyan-400">Python</span>
+      <span class="bg-surface border border-slate-700 px-3 py-1 rounded text-sm text-cyan-400">Java</span>
+      <span class="bg-surface border border-slate-700 px-3 py-1 rounded text-sm text-cyan-400">Kotlin</span>
+      <span class="bg-surface border border-slate-700 px-3 py-1 rounded text-sm text-cyan-400">TypeScript</span>
+      <span class="bg-surface border border-slate-700 px-3 py-1 rounded text-sm text-cyan-400">Flask</span>
+      <span class="bg-surface border border-slate-700 px-3 py-1 rounded text-sm text-violet-400">AWS</span>
+      <span class="bg-surface border border-slate-700 px-3 py-1 rounded text-sm text-violet-400">AWS CDK</span>
+      <span class="bg-surface border border-slate-700 px-3 py-1 rounded text-sm text-violet-400">Docker</span>
+      <span class="bg-surface border border-slate-700 px-3 py-1 rounded text-sm text-violet-400">Git</span>
     </div>
   </section>
 
-  <!-- Proyecto destacado -->
-  <section class="bg-surface border border-slate-700 rounded-lg p-6 mb-10" aria-label="Proyecto destacado">
-    <p class="text-xs text-slate-500 uppercase tracking-wider mb-2">Proyecto destacado</p>
-    <h2 class="text-xl font-mono font-bold mb-2">Nombre del Proyecto</h2>
-    <p class="text-slate-400 text-sm mb-3">Descripción breve del proyecto. Qué hace, qué tecnologías usa.</p>
-    <div class="flex gap-4 text-sm">
-      <a href="#" class="text-cyan-400 hover:underline">demo →</a>
-      <a href="#" class="text-violet-400 hover:underline">repo →</a>
+  <!-- Proyectos -->
+  <section class="mb-12" aria-label="Proyectos">
+    <h2 class="font-mono text-cyan-400 text-sm mb-6">$ ls ~/projects</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+      <!-- The Stalker -->
+      <article class="bg-surface border border-slate-700 rounded-lg p-6 flex flex-col hover:border-cyan-400/50 transition-colors">
+        <div class="flex items-center justify-between mb-3">
+          <p class="text-xs text-slate-500 uppercase tracking-wider font-mono">IoT & Cloud</p>
+        </div>
+        <h3 class="text-lg font-mono font-bold text-slate-100 mb-2">The Stalker</h3>
+        <p class="text-slate-400 text-sm mb-4 flex-1">Plataforma de analítica IoT para un curso universitario. Responsable de toda la infraestructura cloud: reconocimiento facial, redes virtuales y servidores.</p>
+        <div class="flex flex-wrap gap-1.5 mb-4">
+          <span class="px-2 py-0.5 rounded text-xs bg-cyan-400/10 text-cyan-400 border border-cyan-400/20">Amazon Rekognition</span>
+          <span class="px-2 py-0.5 rounded text-xs bg-cyan-400/10 text-cyan-400 border border-cyan-400/20">AWS EC2</span>
+          <span class="px-2 py-0.5 rounded text-xs bg-cyan-400/10 text-cyan-400 border border-cyan-400/20">AWS VPC</span>
+        </div>
+        <div class="flex gap-4 text-sm mt-auto pt-3 border-t border-slate-700">
+          <span class="text-slate-600 text-xs">repo privado</span>
+        </div>
+      </article>
+
+      <!-- WhereTheFit -->
+      <article class="bg-surface border border-slate-700 rounded-lg p-6 flex flex-col hover:border-violet-400/50 transition-colors">
+        <div class="flex items-center justify-between mb-3">
+          <p class="text-xs text-slate-500 uppercase tracking-wider font-mono">Web App</p>
+        </div>
+        <h3 class="text-lg font-mono font-bold text-slate-100 mb-2">WhereTheFit</h3>
+        <p class="text-slate-400 text-sm mb-4 flex-1">Plataforma social de moda donde usuarios comparten outfits y la comunidad ayuda a encontrar dónde comprar cada prenda.</p>
+        <div class="flex flex-wrap gap-1.5 mb-4">
+          <span class="px-2 py-0.5 rounded text-xs bg-violet-400/10 text-violet-400 border border-violet-400/20">Python</span>
+          <span class="px-2 py-0.5 rounded text-xs bg-violet-400/10 text-violet-400 border border-violet-400/20">Flask</span>
+          <span class="px-2 py-0.5 rounded text-xs bg-violet-400/10 text-violet-400 border border-violet-400/20">Amazon S3</span>
+          <span class="px-2 py-0.5 rounded text-xs bg-violet-400/10 text-violet-400 border border-violet-400/20">Amazon RDS</span>
+        </div>
+        <div class="flex gap-4 text-sm mt-auto pt-3 border-t border-slate-700">
+          <a href="https://github.com/candedefranco/WhereTheFit" target="_blank" class="text-violet-400 hover:underline">repo →</a>
+        </div>
+      </article>
+
+      <!-- TruthChain -->
+      <article class="bg-surface border border-slate-700 rounded-lg p-6 flex flex-col hover:border-emerald-400/50 transition-colors">
+        <div class="flex items-center justify-between mb-3">
+          <p class="text-xs text-slate-500 uppercase tracking-wider font-mono">Cloud & IaC</p>
+          <span class="px-2 py-0.5 rounded text-xs bg-emerald-400/10 text-emerald-400 border border-emerald-400/20">In Progress</span>
+        </div>
+        <h3 class="text-lg font-mono font-bold text-slate-100 mb-2">TruthChain</h3>
+        <p class="text-slate-400 text-sm mb-4 flex-1">Sistema de verificación de contenido en tiempo real con IA. Infraestructura como código con AWS CDK para deploy automatizado y escalable.</p>
+        <div class="flex flex-wrap gap-1.5 mb-4">
+          <span class="px-2 py-0.5 rounded text-xs bg-emerald-400/10 text-emerald-400 border border-emerald-400/20">AWS CDK</span>
+          <span class="px-2 py-0.5 rounded text-xs bg-emerald-400/10 text-emerald-400 border border-emerald-400/20">IaC</span>
+          <span class="px-2 py-0.5 rounded text-xs bg-emerald-400/10 text-emerald-400 border border-emerald-400/20">TypeScript</span>
+          <span class="px-2 py-0.5 rounded text-xs bg-emerald-400/10 text-emerald-400 border border-emerald-400/20">AI</span>
+        </div>
+        <div class="flex gap-4 text-sm mt-auto pt-3 border-t border-slate-700">
+          <span class="text-slate-600 text-xs">repo privado</span>
+        </div>
+      </article>
+
+      <!-- Tower Defense -->
+      <article class="bg-surface border border-slate-700 rounded-lg p-6 flex flex-col hover:border-amber-400/50 transition-colors">
+        <div class="flex items-center justify-between mb-3">
+          <p class="text-xs text-slate-500 uppercase tracking-wider font-mono">Game Dev</p>
+        </div>
+        <h3 class="text-lg font-mono font-bold text-slate-100 mb-2">Tower Defense Game</h3>
+        <p class="text-slate-400 text-sm mb-4 flex-1">Juego de estrategia estilo Tower Defense con foco en POO, patrones de diseño y lógica de juegos con múltiples niveles y enemigos.</p>
+        <div class="flex flex-wrap gap-1.5 mb-4">
+          <span class="px-2 py-0.5 rounded text-xs bg-amber-400/10 text-amber-400 border border-amber-400/20">Java</span>
+          <span class="px-2 py-0.5 rounded text-xs bg-amber-400/10 text-amber-400 border border-amber-400/20">OOP</span>
+          <span class="px-2 py-0.5 rounded text-xs bg-amber-400/10 text-amber-400 border border-amber-400/20">Game Logic</span>
+        </div>
+        <div class="flex gap-4 text-sm mt-auto pt-3 border-t border-slate-700">
+          <span class="text-slate-600 text-xs">repo privado</span>
+        </div>
+      </article>
+
+      <!-- Chess & Checkers -->
+      <article class="bg-surface border border-slate-700 rounded-lg p-6 flex flex-col hover:border-cyan-400/50 transition-colors md:col-span-2">
+        <div class="flex items-center justify-between mb-3">
+          <p class="text-xs text-slate-500 uppercase tracking-wider font-mono">Board Games / Logic</p>
+        </div>
+        <h3 class="text-lg font-mono font-bold text-slate-100 mb-2">Chess & Checkers</h3>
+        <p class="text-slate-400 text-sm mb-4 flex-1">Implementación de Ajedrez y Damas con patrones de diseño, validación de reglas complejas, estructuras de datos y lógica de turnos.</p>
+        <div class="flex flex-wrap gap-1.5 mb-4">
+          <span class="px-2 py-0.5 rounded text-xs bg-cyan-400/10 text-cyan-400 border border-cyan-400/20">Java</span>
+          <span class="px-2 py-0.5 rounded text-xs bg-cyan-400/10 text-cyan-400 border border-cyan-400/20">Kotlin</span>
+          <span class="px-2 py-0.5 rounded text-xs bg-cyan-400/10 text-cyan-400 border border-cyan-400/20">OOP</span>
+          <span class="px-2 py-0.5 rounded text-xs bg-cyan-400/10 text-cyan-400 border border-cyan-400/20">Data Structures</span>
+        </div>
+        <div class="flex gap-4 text-sm mt-auto pt-3 border-t border-slate-700">
+          <span class="text-slate-600 text-xs">repo privado</span>
+        </div>
+      </article>
+
     </div>
   </section>
 
   <!-- Contacto -->
-  <footer class="flex gap-6 text-sm text-slate-500">
-    <a href="#" class="hover:text-cyan-400 transition-colors">GitHub</a>
+  <footer class="flex gap-6 text-sm text-slate-500 pt-6 border-t border-slate-700">
+    <a href="https://github.com/candedefranco" target="_blank" class="hover:text-cyan-400 transition-colors">GitHub</a>
     <a href="#" class="hover:text-cyan-400 transition-colors">LinkedIn</a>
     <a href="#" class="hover:text-cyan-400 transition-colors">Email</a>
   </footer>
