@@ -3,17 +3,13 @@ module.exports = {
   content: [
     "./layouts/**/*.html",
     "./content/**/*.md",
-    "./assets/**/*.js",
+    "./assets/**/*.css",
   ],
   theme: {
     extend: {
       fontFamily: {
+        mono: ['JetBrains Mono', 'Fira Code', 'monospace'],
         sans: ['Inter', 'system-ui', 'sans-serif'],
-        mono: ['JetBrains Mono', 'monospace'],
-      },
-      colors: {
-        bg: '#000000',
-        surface: '#1E293B',
       },
     },
   },
