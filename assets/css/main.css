@@ -80,12 +80,12 @@
   .skill-tag--tool {
     color: #a78bfa;
   }
-  .skill-tag--back {
+  .skill-tag.skill-tag--back {
     color: #a78bfa;
     border-color: rgba(167, 139, 250, 0.25);
     background: rgba(167, 139, 250, 0.05);
   }
-  .skill-tag--infra {
+  .skill-tag.skill-tag--infra {
     color: #34d399;
     border-color: rgba(52, 211, 153, 0.25);
     background: rgba(52, 211, 153, 0.05);
