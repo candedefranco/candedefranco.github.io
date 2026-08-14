@@ -76,6 +76,13 @@
     background: rgba(56, 189, 248, 0.05);
     color: #38bdf8;
     border: 1px solid rgba(56, 189, 248, 0.25);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    cursor: default;
+  }
+  .skill-tag:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(56, 189, 248, 0.15);
+    background: rgba(56, 189, 248, 0.1);
   }
   .skill-tag--tool {
     color: #a78bfa;
@@ -85,15 +92,27 @@
     border-color: rgba(167, 139, 250, 0.25);
     background: rgba(167, 139, 250, 0.05);
   }
+  .skill-tag.skill-tag--back:hover {
+    box-shadow: 0 4px 12px rgba(167, 139, 250, 0.15);
+    background: rgba(167, 139, 250, 0.1);
+  }
   .skill-tag.skill-tag--infra {
     color: #34d399;
     border-color: rgba(52, 211, 153, 0.25);
     background: rgba(52, 211, 153, 0.05);
   }
+  .skill-tag.skill-tag--infra:hover {
+    box-shadow: 0 4px 12px rgba(52, 211, 153, 0.15);
+    background: rgba(52, 211, 153, 0.1);
+  }
   .skill-tag.skill-tag--ai {
     color: #fbbf24;
     border-color: rgba(251, 191, 36, 0.25);
     background: rgba(251, 191, 36, 0.05);
+  }
+  .skill-tag.skill-tag--ai:hover {
+    box-shadow: 0 4px 12px rgba(251, 191, 36, 0.15);
+    background: rgba(251, 191, 36, 0.1);
   }
 
   .link-btn {
