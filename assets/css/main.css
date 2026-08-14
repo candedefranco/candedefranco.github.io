@@ -90,6 +90,11 @@
     border-color: rgba(52, 211, 153, 0.25);
     background: rgba(52, 211, 153, 0.05);
   }
+  .skill-tag.skill-tag--ai {
+    color: #fbbf24;
+    border-color: rgba(251, 191, 36, 0.25);
+    background: rgba(251, 191, 36, 0.05);
+  }
 
   .link-btn {
     font-size: 0.8rem;
