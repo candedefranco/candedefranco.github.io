@@ -15,5 +15,29 @@
 </head>
 <body class="min-h-screen flex items-center justify-center p-6 md:p-8">
   {{ block "main" . }}{{ end }}
+  <script>
+    let currentSlide = 0;
+    const track = document.querySelector('.carousel-track');
+    const dots = document.querySelectorAll('.dot');
+    const totalSlides = dots.length;
+
+    function updateCarousel() {
+      if (track) track.style.transform = 'translateX(-' + (currentSlide * 100) + '%)';
+      dots.forEach((d, i) => d.classList.toggle('dot-active', i === currentSlide));
+    }
+
+    function moveCarousel(dir) {
+      currentSlide = (currentSlide + dir + totalSlides) % totalSlides;
+      updateCarousel();
+    }
+
+    function goToSlide(i) {
+      currentSlide = i;
+      updateCarousel();
+    }
+
+    // Auto-advance every 4s
+    setInterval(function() { moveCarousel(1); }, 4000);
+  </script>
 </body>
 </html>
