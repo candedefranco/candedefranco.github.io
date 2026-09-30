@@ -128,23 +128,14 @@
   /* ---------- neofetch hero ---------- */
   .neofetch {
     display: grid;
-    gap: 1.25rem;
-    margin-top: 1rem;
-  }
-  @media (min-width: 768px) {
-    .neofetch {
-      grid-template-columns: auto 1fr;
-      gap: 2.25rem;
-      align-items: center;
-    }
+    gap: 1.5rem;
+    margin-top: 1.1rem;
   }
   .ascii {
     display: block;
-    width: 11rem;
+    width: 100%;
+    max-width: 36rem;
     height: auto;
-  }
-  @media (min-width: 768px) {
-    .ascii { width: 15.5rem; }
   }
   .info {
     font-size: 0.82rem;
