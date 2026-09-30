@@ -1,114 +1,149 @@
 {{ define "main" }}
-<main class="max-w-3xl w-full mx-auto px-6 md:px-8 py-16 md:py-28 relative">
+<main class="max-w-4xl w-full mx-auto py-12 md:py-20 relative">
 
   <!-- Language toggle -->
   <div style="position: fixed; top: 20px; right: 20px; z-index: 50;">
     <button onclick="toggleLang()" class="lang-toggle" id="lang-btn">ES</button>
   </div>
 
-  <!-- Header -->
-  <header class="mb-14">
-    <p class="text-sm text-sky-400 mb-3 opacity-70">~/candedefranco</p>
-    <h1 class="text-4xl md:text-5xl font-bold mb-2 text-white">Candela De Franco</h1>
-    <p class="text-lg text-sky-400 font-medium mb-3">Software Engineer</p>
-    <p class="text-sm text-slate-400 max-w-md leading-relaxed mb-4">Clean code, cloud, and systems that scale.</p>
-    <p class="text-sm text-slate-500 leading-relaxed max-w-lg" data-en="Software Engineering student at Universidad Austral. Graduating in late 2028. Founder of the AWS Student Builder Group. Full stack profile with experience across frontend, backend, and cloud infrastructure." data-es="Estudiante de Ingeniería Informática en la Universidad Austral. Finalizo la carrera a fines de 2028. Fundadora del AWS Student Builder Group. Perfil full stack con experiencia en frontend, backend e infraestructura cloud.">
-      Software Engineering student at Universidad Austral. Graduating in late 2028. Founder of the AWS Student Builder Group. Full stack profile with experience across frontend, backend, and cloud infrastructure.
-    </p>
-    <div class="mt-5 flex flex-wrap items-center gap-3">
-      <a href="https://github.com/candedefranco" target="_blank" rel="noopener" class="social-icon" aria-label="GitHub" title="GitHub">
-        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-      </a>
-      <a href="https://www.linkedin.com/in/candela-de-franco/" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn" title="LinkedIn">
-        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-      </a>
-      <a href="mailto:candedefranco@gmail.com" class="social-icon" aria-label="Email" title="Email">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
-      </a>
-      <span class="w-px h-5 bg-slate-800 mx-1" aria-hidden="true"></span>
-      <a href="/cv.pdf" target="_blank" class="link-btn" data-en="Download CV →" data-es="Descargar CV →">Download CV →</a>
+  <!-- Hero: neofetch -->
+  <header class="term">
+    <div class="term-bar">
+      <div class="term-dots"><span></span><span></span><span></span></div>
+      <span class="term-title">candela@austral: ~ — zsh</span>
+      <div class="term-dots" style="visibility: hidden;"><span></span><span></span><span></span></div>
+    </div>
+    <div class="term-body">
+      <p class="prompt"><span class="u">candela@austral</span><span class="h">:</span><span class="d">~</span><span class="h">$ </span><span class="typed">neofetch</span></p>
+
+      <div class="neofetch">
+        <svg class="ascii reveal" viewBox="0 0 264 132" role="img" aria-label="CDF">
+          <defs><linearGradient id="logo-grad" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="132"><stop offset="0" stop-color="#79c0ff"/><stop offset="1" stop-color="#d2a8ff"/></linearGradient></defs>
+          <path d="M82.5 11L77 11M82.5 11L82.5 22M159.5 11L154 11M159.5 11L159.5 22M258.5 11L253 11M258.5 11L258.5 22M27.5 33L33 33M27.5 33L27.5 44M38.5 33L33 33M38.5 33L44 33M49.5 33L44 33M49.5 33L55 33M60.5 33L55 33M60.5 33L66 33M71.5 33L66 33M71.5 33L77 33M82.5 33L77 33M82.5 33L82.5 22M115.5 33L121 33M115.5 33L115.5 44M126.5 33L121 33M126.5 33L132 33M137.5 33L132 33M137.5 33L143 33M170.5 33L165 33M170.5 33L170.5 44M203.5 33L209 33M203.5 33L203.5 44M214.5 33L209 33M214.5 33L220 33M225.5 33L220 33M225.5 33L231 33M236.5 33L231 33M236.5 33L242 33M247.5 33L242 33M247.5 33L253 33M258.5 33L253 33M258.5 33L258.5 22M27.5 55L27.5 44M27.5 55L27.5 66M115.5 55L115.5 44M115.5 55L115.5 66M170.5 55L170.5 44M170.5 55L170.5 66M236.5 55L231 55M236.5 55L236.5 66M27.5 77L27.5 66M27.5 77L27.5 88M115.5 77L115.5 66M115.5 77L115.5 88M170.5 77L170.5 66M170.5 77L170.5 88M203.5 77L209 77M203.5 77L203.5 88M214.5 77L209 77M214.5 77L220 77M225.5 77L220 77M225.5 77L231 77M236.5 77L231 77M236.5 77L236.5 66M5.5 99L11 99M5.5 99L5.5 88M82.5 99L77 99M82.5 99L82.5 110M159.5 99L165 99M159.5 99L159.5 110M170.5 99L165 99M170.5 99L170.5 88M203.5 99L203.5 88M203.5 99L203.5 110M16.5 121L22 121M16.5 121L16.5 110M27.5 121L22 121M27.5 121L33 121M38.5 121L33 121M38.5 121L44 121M49.5 121L44 121M49.5 121L55 121M60.5 121L55 121M60.5 121L66 121M71.5 121L66 121M71.5 121L77 121M82.5 121L77 121M82.5 121L82.5 110M93.5 121L99 121M93.5 121L93.5 110M104.5 121L99 121M104.5 121L110 121M115.5 121L110 121M115.5 121L121 121M126.5 121L121 121M126.5 121L132 121M137.5 121L132 121M137.5 121L143 121M148.5 121L143 121M148.5 121L154 121M159.5 121L154 121M159.5 121L159.5 110M181.5 121L187 121M181.5 121L181.5 110M192.5 121L187 121M192.5 121L198 121M203.5 121L198 121M203.5 121L203.5 110" stroke="url(#logo-grad)" stroke-opacity="0.55" stroke-width="2" stroke-linecap="square" fill="none"/>
+          <g fill="url(#logo-grad)"><rect x="11" y="0" width="11.4" height="22.4"/><rect x="22" y="0" width="11.4" height="22.4"/><rect x="33" y="0" width="11.4" height="22.4"/><rect x="44" y="0" width="11.4" height="22.4"/><rect x="55" y="0" width="11.4" height="22.4"/><rect x="66" y="0" width="11.4" height="22.4"/><rect x="88" y="0" width="11.4" height="22.4"/><rect x="99" y="0" width="11.4" height="22.4"/><rect x="110" y="0" width="11.4" height="22.4"/><rect x="121" y="0" width="11.4" height="22.4"/><rect x="132" y="0" width="11.4" height="22.4"/><rect x="143" y="0" width="11.4" height="22.4"/><rect x="176" y="0" width="11.4" height="22.4"/><rect x="187" y="0" width="11.4" height="22.4"/><rect x="198" y="0" width="11.4" height="22.4"/><rect x="209" y="0" width="11.4" height="22.4"/><rect x="220" y="0" width="11.4" height="22.4"/><rect x="231" y="0" width="11.4" height="22.4"/><rect x="242" y="0" width="11.4" height="22.4"/><rect x="0" y="22" width="11.4" height="22.4"/><rect x="11" y="22" width="11.4" height="22.4"/><rect x="88" y="22" width="11.4" height="22.4"/><rect x="99" y="22" width="11.4" height="22.4"/><rect x="143" y="22" width="11.4" height="22.4"/><rect x="154" y="22" width="11.4" height="22.4"/><rect x="176" y="22" width="11.4" height="22.4"/><rect x="187" y="22" width="11.4" height="22.4"/><rect x="0" y="44" width="11.4" height="22.4"/><rect x="11" y="44" width="11.4" height="22.4"/><rect x="88" y="44" width="11.4" height="22.4"/><rect x="99" y="44" width="11.4" height="22.4"/><rect x="143" y="44" width="11.4" height="22.4"/><rect x="154" y="44" width="11.4" height="22.4"/><rect x="176" y="44" width="11.4" height="22.4"/><rect x="187" y="44" width="11.4" height="22.4"/><rect x="198" y="44" width="11.4" height="22.4"/><rect x="209" y="44" width="11.4" height="22.4"/><rect x="220" y="44" width="11.4" height="22.4"/><rect x="0" y="66" width="11.4" height="22.4"/><rect x="11" y="66" width="11.4" height="22.4"/><rect x="88" y="66" width="11.4" height="22.4"/><rect x="99" y="66" width="11.4" height="22.4"/><rect x="143" y="66" width="11.4" height="22.4"/><rect x="154" y="66" width="11.4" height="22.4"/><rect x="176" y="66" width="11.4" height="22.4"/><rect x="187" y="66" width="11.4" height="22.4"/><rect x="11" y="88" width="11.4" height="22.4"/><rect x="22" y="88" width="11.4" height="22.4"/><rect x="33" y="88" width="11.4" height="22.4"/><rect x="44" y="88" width="11.4" height="22.4"/><rect x="55" y="88" width="11.4" height="22.4"/><rect x="66" y="88" width="11.4" height="22.4"/><rect x="88" y="88" width="11.4" height="22.4"/><rect x="99" y="88" width="11.4" height="22.4"/><rect x="110" y="88" width="11.4" height="22.4"/><rect x="121" y="88" width="11.4" height="22.4"/><rect x="132" y="88" width="11.4" height="22.4"/><rect x="143" y="88" width="11.4" height="22.4"/><rect x="176" y="88" width="11.4" height="22.4"/><rect x="187" y="88" width="11.4" height="22.4"/></g>
+        </svg>
+
+        <div class="info">
+          <p class="info-title reveal" style="--d: 1.3s">candela<span class="at">@</span>austral</p>
+          <p class="info-rule reveal" style="--d: 1.35s">───────────────</p>
+          <div class="info-row reveal" style="--d: 1.4s"><span class="info-key">Name</span><h1 class="info-val">Candela De Franco</h1></div>
+          <div class="info-row reveal" style="--d: 1.45s"><span class="info-key">Role</span><span class="info-val" data-en="Software Engineer (student)" data-es="Software Engineer (estudiante)">Software Engineer (student)</span></div>
+          <div class="info-row reveal" style="--d: 1.5s"><span class="info-key">Uni</span><span class="info-val" data-en="Universidad Austral · class of 2028" data-es="Universidad Austral · egreso 2028">Universidad Austral · class of 2028</span></div>
+          <div class="info-row reveal" style="--d: 1.55s"><span class="info-key">Focus</span><span class="info-val" data-en="clean code · cloud · systems that scale" data-es="código limpio · cloud · sistemas que escalan">clean code · cloud · systems that scale</span></div>
+          <div class="info-row reveal" style="--d: 1.6s"><span class="info-key">Languages</span><span class="info-val">TypeScript, Python, Java, Kotlin</span></div>
+          <div class="info-row reveal" style="--d: 1.65s"><span class="info-key">Cloud</span><span class="info-val">AWS · Terraform · Docker</span></div>
+          <div class="info-row reveal" style="--d: 1.7s"><span class="info-key">Community</span><span class="info-val" data-en="Founder @ AWS Student Builder Group" data-es="Fundadora @ AWS Student Builder Group">Founder @ AWS Student Builder Group</span></div>
+          <div class="info-row reveal" style="--d: 1.75s"><span class="info-key">Uptime</span><span class="info-val" data-en="building since 2023" data-es="construyendo desde 2023">building since 2023</span></div>
+          <div class="swatches reveal" style="--d: 1.8s" aria-hidden="true">
+            <span style="background:#484f58"></span><span style="background:#ff7b72"></span><span style="background:#7ee787"></span><span style="background:#e3b341"></span><span style="background:#79c0ff"></span><span style="background:#d2a8ff"></span><span style="background:#39c5cf"></span><span style="background:#e6edf3"></span>
+          </div>
+        </div>
+      </div>
+
+      <p class="prompt reveal" style="--d: 2s; margin-top: 1.6rem;"><span class="u">candela@austral</span><span class="h">:</span><span class="d">~</span><span class="h">$ </span>cat about.md</p>
+      <p class="about reveal" style="--d: 2.1s" data-en="Software Engineering student at Universidad Austral. Graduating in late 2028. Founder of the AWS Student Builder Group. Full stack profile with experience across frontend, backend, and cloud infrastructure." data-es="Estudiante de Ingeniería Informática en la Universidad Austral. Finalizo la carrera a fines de 2028. Fundadora del AWS Student Builder Group. Perfil full stack con experiencia en frontend, backend e infraestructura cloud.">Software Engineering student at Universidad Austral. Graduating in late 2028. Founder of the AWS Student Builder Group. Full stack profile with experience across frontend, backend, and cloud infrastructure.</p>
+
+      <div class="reveal mt-6 flex flex-wrap items-center gap-3" style="--d: 2.2s">
+        <a href="https://github.com/candedefranco" target="_blank" rel="noopener" class="social-icon" aria-label="GitHub" title="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/candela-de-franco/" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn" title="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        <a href="mailto:candedefranco@gmail.com" class="social-icon" aria-label="Email" title="Email">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+        </a>
+        <a href="/cv.pdf" target="_blank" class="cv-btn" data-en="./download-cv ↓" data-es="./descargar-cv ↓">./download-cv ↓</a>
+      </div>
+
+      <p class="prompt reveal" style="--d: 2.3s; margin-top: 1.6rem;"><span class="u">candela@austral</span><span class="h">:</span><span class="d">~</span><span class="h">$ </span><span class="cursor"></span></p>
     </div>
   </header>
 
-  <!-- Skills -->
-  <section class="mb-14">
-    <p class="text-xs text-slate-500 uppercase tracking-widest mb-4">stack</p>
+  <!-- Stack -->
+  <section class="sec">
+    <h2 class="sec-title">ls ~/stack</h2>
 
-    <div class="mb-4">
-      <p class="text-xs text-slate-600 uppercase tracking-wider mb-2" data-en="frontend" data-es="frontend">frontend</p>
-      <div class="flex flex-wrap gap-2">
-        <span class="skill-tag">React</span>
-        <span class="skill-tag">Next.js</span>
-        <span class="skill-tag">TypeScript</span>
-        <span class="skill-tag">JavaScript</span>
-        <span class="skill-tag">HTML</span>
-        <span class="skill-tag">CSS</span>
-        <span class="skill-tag">Tailwind</span>
-        <span class="skill-tag">Figma</span>
+    <div class="dir">
+      <p class="dir-name c-blue">frontend/</p>
+      <div class="chips">
+        <span class="chip c-blue">React</span>
+        <span class="chip c-blue">Next.js</span>
+        <span class="chip c-blue">TypeScript</span>
+        <span class="chip c-blue">JavaScript</span>
+        <span class="chip c-blue">HTML</span>
+        <span class="chip c-blue">CSS</span>
+        <span class="chip c-blue">Tailwind</span>
+        <span class="chip c-blue">Figma</span>
       </div>
     </div>
 
-    <div class="mb-4">
-      <p class="text-xs text-slate-600 uppercase tracking-wider mb-2">backend</p>
-      <div class="flex flex-wrap gap-2">
-        <span class="skill-tag skill-tag--back">Python</span>
-        <span class="skill-tag skill-tag--back">Java</span>
-        <span class="skill-tag skill-tag--back">Kotlin</span>
-        <span class="skill-tag skill-tag--back">Node.js</span>
-        <span class="skill-tag skill-tag--back">NestJS</span>
-        <span class="skill-tag skill-tag--back">Flask</span>
-        <span class="skill-tag skill-tag--back">FastAPI</span>
-        <span class="skill-tag skill-tag--back">REST APIs</span>
-        <span class="skill-tag skill-tag--back">PostgreSQL</span>
-        <span class="skill-tag skill-tag--back">MongoDB</span>
+    <div class="dir">
+      <p class="dir-name c-purple">backend/</p>
+      <div class="chips">
+        <span class="chip c-purple">Python</span>
+        <span class="chip c-purple">Java</span>
+        <span class="chip c-purple">Kotlin</span>
+        <span class="chip c-purple">Node.js</span>
+        <span class="chip c-purple">NestJS</span>
+        <span class="chip c-purple">Flask</span>
+        <span class="chip c-purple">FastAPI</span>
+        <span class="chip c-purple">REST APIs</span>
+        <span class="chip c-purple">PostgreSQL</span>
+        <span class="chip c-purple">MongoDB</span>
       </div>
     </div>
 
-    <div class="mb-4">
-      <p class="text-xs text-slate-600 uppercase tracking-wider mb-2" data-en="infrastructure" data-es="infraestructura">infrastructure</p>
-      <div class="flex flex-wrap gap-2">
-        <span class="skill-tag skill-tag--infra">AWS</span>
-        <span class="skill-tag skill-tag--infra">Terraform</span>
-        <span class="skill-tag skill-tag--infra">CloudFormation</span>
-        <span class="skill-tag skill-tag--infra">Docker</span>
-        <span class="skill-tag skill-tag--infra">Git</span>
-        <span class="skill-tag skill-tag--infra">Linux</span>
-        <span class="skill-tag skill-tag--infra">CI/CD</span>
+    <div class="dir">
+      <p class="dir-name c-green" data-en="infrastructure/" data-es="infraestructura/">infrastructure/</p>
+      <div class="chips">
+        <span class="chip c-green">AWS</span>
+        <span class="chip c-green">Terraform</span>
+        <span class="chip c-green">CloudFormation</span>
+        <span class="chip c-green">Docker</span>
+        <span class="chip c-green">Git</span>
+        <span class="chip c-green">Linux</span>
+        <span class="chip c-green">CI/CD</span>
       </div>
     </div>
 
-    <div>
-      <p class="text-xs text-slate-600 uppercase tracking-wider mb-2" data-en="ai & tools" data-es="ia & herramientas">ai & tools</p>
-      <div class="flex flex-wrap gap-2">
-        <span class="skill-tag skill-tag--ai">AI Agents</span>
-        <span class="skill-tag skill-tag--ai">Prompt Engineering</span>
-        <span class="skill-tag skill-tag--ai">AI-assisted Development</span>
+    <div class="dir">
+      <p class="dir-name c-orange" data-en="ai-and-tools/" data-es="ia-y-herramientas/">ai-and-tools/</p>
+      <div class="chips">
+        <span class="chip c-orange">AI Agents</span>
+        <span class="chip c-orange">Prompt Engineering</span>
+        <span class="chip c-orange">AI-assisted Development</span>
       </div>
     </div>
   </section>
 
   <!-- AWS Student Builder Group -->
-  <hr style="border: none; border-top: 1px solid #1e293b; margin: 2.5rem 0;">
-  <section class="mb-14">
-    <p class="text-xs text-slate-500 uppercase tracking-widest mb-6" data-en="community" data-es="comunidad">community</p>
+  <section class="sec">
+    <h2 class="sec-title">tail -f community.log</h2>
 
-    <div class="card" style="padding: 0; overflow: hidden;">
+    <div class="term">
+      <div class="term-bar">
+        <div class="term-dots"><span></span><span></span><span></span></div>
+        <span class="term-title">~/community — AWS Student Builder Group</span>
+        <div class="term-dots" style="visibility: hidden;"><span></span><span></span><span></span></div>
+      </div>
+
       <!-- Carrusel -->
       <div class="carousel" style="position: relative; width: 100%; overflow: hidden;">
         <div class="carousel-track" style="display: flex; transition: transform 0.4s ease; width: 100%;">
-          <img src="/images/aws-community/aws-01.jpg" alt="AWS Student Builder Group" style="width: 100%; height: 280px; object-fit: cover; flex-shrink: 0;">
-          <img src="/images/aws-community/aws-02.jpg" alt="AWS Student Builder Group" style="width: 100%; height: 280px; object-fit: cover; flex-shrink: 0;">
-          <img src="/images/aws-community/aws-03.jpg" alt="AWS Student Builder Group" style="width: 100%; height: 280px; object-fit: cover; flex-shrink: 0;">
-          <img src="/images/aws-community/aws-04.jpg" alt="AWS Student Builder Group" style="width: 100%; height: 280px; object-fit: cover; flex-shrink: 0;">
-          <img src="/images/aws-community/aws-05.jpg" alt="AWS Student Builder Group" style="width: 100%; height: 280px; object-fit: cover; flex-shrink: 0;">
-          <img src="/images/aws-community/aws-06.jpg" alt="AWS Student Builder Group" style="width: 100%; height: 280px; object-fit: cover; flex-shrink: 0;">
-          <img src="/images/aws-community/aws-07.jpg" alt="AWS Student Builder Group" style="width: 100%; height: 280px; object-fit: cover; flex-shrink: 0;">
-          <img src="/images/aws-community/aws-08.png" alt="AWS Student Builder Group" style="width: 100%; height: 280px; object-fit: cover; flex-shrink: 0;">
-          <img src="/images/aws-community/aws-09.jpg" alt="AWS Student Builder Group" style="width: 100%; height: 280px; object-fit: cover; flex-shrink: 0;">
+          <img src="/images/aws-community/aws-01.jpg" alt="AWS Student Builder Group" class="carousel-img">
+          <img src="/images/aws-community/aws-02.jpg" alt="AWS Student Builder Group" class="carousel-img">
+          <img src="/images/aws-community/aws-03.jpg" alt="AWS Student Builder Group" class="carousel-img">
+          <img src="/images/aws-community/aws-04.jpg" alt="AWS Student Builder Group" class="carousel-img">
+          <img src="/images/aws-community/aws-05.jpg" alt="AWS Student Builder Group" class="carousel-img">
+          <img src="/images/aws-community/aws-06.jpg" alt="AWS Student Builder Group" class="carousel-img">
+          <img src="/images/aws-community/aws-07.jpg" alt="AWS Student Builder Group" class="carousel-img">
+          <img src="/images/aws-community/aws-08.png" alt="AWS Student Builder Group" class="carousel-img">
+          <img src="/images/aws-community/aws-09.jpg" alt="AWS Student Builder Group" class="carousel-img">
         </div>
         <!-- Controls -->
-        <button onclick="moveCarousel(-1)" style="position: absolute; top: 50%; left: 12px; transform: translateY(-50%); background: rgba(0,0,0,0.6); border: 1px solid rgba(255,255,255,0.2); color: white; width: 36px; height: 36px; border-radius: 50%; cursor: pointer; font-size: 16px; display: flex; align-items: center; justify-content: center;">←</button>
-        <button onclick="moveCarousel(1)" style="position: absolute; top: 50%; right: 12px; transform: translateY(-50%); background: rgba(0,0,0,0.6); border: 1px solid rgba(255,255,255,0.2); color: white; width: 36px; height: 36px; border-radius: 50%; cursor: pointer; font-size: 16px; display: flex; align-items: center; justify-content: center;">→</button>
+        <button onclick="moveCarousel(-1)" class="carousel-btn" style="left: 12px;" aria-label="Previous">←</button>
+        <button onclick="moveCarousel(1)" class="carousel-btn" style="right: 12px;" aria-label="Next">→</button>
         <!-- Dots -->
         <div style="position: absolute; bottom: 12px; left: 50%; transform: translateX(-50%); display: flex; gap: 6px;">
           <span class="dot dot-active" onclick="goToSlide(0)"></span>
@@ -124,173 +159,181 @@
       </div>
 
       <!-- Content -->
-      <div style="padding: 1.5rem;">
-        <div class="flex items-center gap-3 mb-3">
-          <span class="badge-progress" data-en="Founder & Leader" data-es="Fundadora & Líder">Founder & Leader</span>
-        </div>
-        <h3 class="text-lg font-bold text-white mb-3">AWS Student Builder Group</h3>
-        <p class="text-sm text-slate-400 leading-relaxed mb-4" data-en="I founded and lead the AWS Student Builder Group at my university. I organize workshops, tech talks, and hands-on sessions where we teach other students how to build on the cloud." data-es="Fundé y lidero el AWS Student Builder Group de mi universidad. Organizo workshops, charlas técnicas y sesiones hands-on donde enseñamos a otros estudiantes a construir en la nube.">
-          I founded and lead the AWS Student Builder Group at my university. I organize workshops, tech talks, and hands-on sessions where we teach other students how to build on the cloud.
-        </p>
+      <div class="term-body">
+        <p class="log"><span class="lvl lvl-info">[INFO]</span><span class="text-white font-bold" data-en="Founder & Leader · AWS Student Builder Group" data-es="Fundadora & Líder · AWS Student Builder Group">Founder & Leader · AWS Student Builder Group</span></p>
+        <p class="log-text" data-en="I founded and lead the AWS Student Builder Group at my university. I organize workshops, tech talks, and hands-on sessions where we teach other students how to build on the cloud." data-es="Fundé y lidero el AWS Student Builder Group de mi universidad. Organizo workshops, charlas técnicas y sesiones hands-on donde enseñamos a otros estudiantes a construir en la nube.">I founded and lead the AWS Student Builder Group at my university. I organize workshops, tech talks, and hands-on sessions where we teach other students how to build on the cloud.</p>
 
-        <p class="text-xs text-slate-500 uppercase tracking-widest mb-3" data-en="What it taught me" data-es="Lo que me enseñó">What it taught me</p>
-        <ul class="text-sm text-slate-400 leading-relaxed space-y-1.5" style="list-style: none; padding: 0;">
-          <li data-en="→ Technical leadership and team organization" data-es="→ Liderazgo técnico y organización de equipos">→ Technical leadership and team organization</li>
-          <li data-en="→ Communicating complex concepts in a simple way" data-es="→ Comunicar conceptos complejos de forma simple">→ Communicating complex concepts in a simple way</li>
-          <li data-en="→ Community and event management" data-es="→ Gestión de comunidad y eventos">→ Community and event management</li>
-          <li data-en="→ Mentoring students starting out in cloud" data-es="→ Mentoría a estudiantes que arrancan en cloud">→ Mentoring students starting out in cloud</li>
-          <li data-en="→ End-to-end project ownership" data-es="→ Ownership de proyectos de punta a punta">→ End-to-end project ownership</li>
+        <p class="sub-prompt" data-en="cat what-it-taught-me.txt" data-es="cat lo-que-me-enseño.txt">cat what-it-taught-me.txt</p>
+        <ul class="arrow-list">
+          <li data-en="Technical leadership and team organization" data-es="Liderazgo técnico y organización de equipos">Technical leadership and team organization</li>
+          <li data-en="Communicating complex concepts in a simple way" data-es="Comunicar conceptos complejos de forma simple">Communicating complex concepts in a simple way</li>
+          <li data-en="Community and event management" data-es="Gestión de comunidad y eventos">Community and event management</li>
+          <li data-en="Mentoring students starting out in cloud" data-es="Mentoría a estudiantes que arrancan en cloud">Mentoring students starting out in cloud</li>
+          <li data-en="End-to-end project ownership" data-es="Ownership de proyectos de punta a punta">End-to-end project ownership</li>
         </ul>
 
-        <div class="mt-10 mb-8 pt-6 border-t border-slate-700">
-          <p class="text-xs text-slate-500 uppercase tracking-widest mb-3" data-en="Certifications" data-es="Certificaciones">Certifications</p>
-          <div class="flex items-center gap-3">
-            <span class="badge-progress" data-en="Preparing" data-es="Preparando">Preparing</span>
-            <span class="text-sm text-slate-300">AWS Cloud Practitioner</span>
-          </div>
-        </div>
+        <p class="sub-prompt" data-en="cat certifications.log" data-es="cat certificaciones.log">cat certifications.log</p>
+        <p class="log"><span class="lvl lvl-warn">[WARN]</span><span class="text-slate-300" data-en="AWS Cloud Practitioner — in preparation..." data-es="AWS Cloud Practitioner — en preparación...">AWS Cloud Practitioner — in preparation...</span></p>
 
-        <p class="text-xs text-slate-500 uppercase tracking-widest mb-3" data-en="AWS services I work with" data-es="Servicios AWS que manejo">AWS services I work with</p>
-        <div class="flex flex-wrap gap-1.5">
-          <span class="tag">EC2</span>
-          <span class="tag">S3</span>
-          <span class="tag">RDS</span>
-          <span class="tag">Lambda</span>
-          <span class="tag">VPC</span>
-          <span class="tag">CDK</span>
-          <span class="tag">CloudFormation</span>
-          <span class="tag">Rekognition</span>
-          <span class="tag">IAM</span>
-          <span class="tag">CloudWatch</span>
-          <span class="tag">API Gateway</span>
-          <span class="tag">DynamoDB</span>
+        <p class="sub-prompt">ls ~/aws/services</p>
+        <div class="chips">
+          <span class="chip chip--sm c-orange">EC2</span>
+          <span class="chip chip--sm c-orange">S3</span>
+          <span class="chip chip--sm c-orange">RDS</span>
+          <span class="chip chip--sm c-orange">Lambda</span>
+          <span class="chip chip--sm c-orange">VPC</span>
+          <span class="chip chip--sm c-orange">CDK</span>
+          <span class="chip chip--sm c-orange">CloudFormation</span>
+          <span class="chip chip--sm c-orange">Rekognition</span>
+          <span class="chip chip--sm c-orange">IAM</span>
+          <span class="chip chip--sm c-orange">CloudWatch</span>
+          <span class="chip chip--sm c-orange">API Gateway</span>
+          <span class="chip chip--sm c-orange">DynamoDB</span>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Projects -->
-  <hr style="border: none; border-top: 1px solid #1e293b; margin: 2.5rem 0;">
-  <section class="mb-14">
-    <p class="text-xs text-slate-500 uppercase tracking-widest mb-6" data-en="projects" data-es="proyectos">projects</p>
+  <section class="sec">
+    <h2 class="sec-title" data-en="ls ~/projects" data-es="ls ~/proyectos">ls ~/projects</h2>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
 
-      <!-- SmartTrack -->
-      <div class="card">
-        <div class="flex items-center justify-between mb-4">
-          <span class="text-xs text-slate-500 uppercase tracking-wider">IoT & Cloud</span>
+      <!-- TruthChain -->
+      <article class="term proj">
+        <div class="term-bar">
+          <div class="term-dots"><span></span><span></span><span></span></div>
+          <span class="term-title">~/truthchain</span>
+          <span class="status status--run" data-en="● in progress" data-es="● en progreso">● in progress</span>
         </div>
-        <h3 class="text-lg font-bold text-white mb-2">SmartTrack</h3>
-        <p class="text-sm text-slate-400 leading-relaxed mb-4 flex-1" data-en="IoT analytics platform built for a university course. I designed and deployed the entire cloud infrastructure: facial recognition with Rekognition, networking with VPC, and compute with EC2." data-es="Plataforma de analítica IoT desarrollada para un curso universitario. Diseñé y desplegué toda la infraestructura cloud: reconocimiento facial con Rekognition, redes con VPC y cómputo con EC2.">IoT analytics platform built for a university course. I designed and deployed the entire cloud infrastructure: facial recognition with Rekognition, networking with VPC, and compute with EC2.</p>
-        <div class="flex flex-wrap gap-1.5 mb-4">
-          <span class="tag">Rekognition</span>
-          <span class="tag">EC2</span>
-          <span class="tag">VPC</span>
+        <div class="term-body">
+          <p class="comment"># Cloud & IaC</p>
+          <h3>TruthChain</h3>
+          <p class="proj-desc" data-en="Multimodal content verification system powered by AI. All infrastructure defined as code with AWS CDK for automated, repeatable deployments." data-es="Sistema de verificación de contenido multimodal con IA. Toda la infraestructura definida como código con AWS CDK para deploys automatizados y repetibles.">Multimodal content verification system powered by AI. All infrastructure defined as code with AWS CDK for automated, repeatable deployments.</p>
+          <div class="chips">
+            <span class="chip chip--sm c-green">AWS CDK</span>
+            <span class="chip chip--sm c-green">IaC</span>
+            <span class="chip chip--sm c-green">TypeScript</span>
+            <span class="chip chip--sm c-green">AI</span>
+          </div>
+          <div class="proj-foot"><span data-en="🔒 private repo" data-es="🔒 repo privado">🔒 private repo</span></div>
         </div>
-        <div class="pt-3 border-t border-slate-800">
-          <span class="text-xs text-slate-600" data-en="private repo" data-es="repo privado">private repo</span>
-        </div>
-      </div>
+      </article>
 
       <!-- WhereTheFit -->
-      <div class="card">
-        <div class="flex items-center justify-between mb-4">
-          <span class="text-xs text-slate-500 uppercase tracking-wider">Web App</span>
+      <article class="term proj">
+        <div class="term-bar">
+          <div class="term-dots"><span></span><span></span><span></span></div>
+          <span class="term-title">~/wherethefit</span>
+          <span class="status status--done" data-en="✓ shipped" data-es="✓ terminado">✓ shipped</span>
         </div>
-        <h3 class="text-lg font-bold text-white mb-2">WhereTheFit</h3>
-        <p class="text-sm text-slate-400 leading-relaxed mb-4 flex-1" data-en="Social platform where users post outfit photos and the community helps identify where to buy each piece. Built with Flask, PostgreSQL for data persistence, and AWS S3 for media storage." data-es="Plataforma social donde los usuarios publican fotos de outfits y la comunidad ayuda a identificar dónde comprar cada prenda. Desarrollada con Flask, PostgreSQL para persistencia y AWS S3 para almacenamiento de media.">Social platform where users post outfit photos and the community helps identify where to buy each piece. Built with Flask, PostgreSQL for data persistence, and AWS S3 for media storage.</p>
-        <div class="flex flex-wrap gap-1.5 mb-4">
-          <span class="tag--violet tag">Python</span>
-          <span class="tag--violet tag">Flask</span>
-          <span class="tag--violet tag">S3</span>
-          <span class="tag--violet tag">RDS</span>
+        <div class="term-body">
+          <p class="comment"># Web App</p>
+          <h3>WhereTheFit</h3>
+          <p class="proj-desc" data-en="Social platform where users post outfit photos and the community helps identify where to buy each piece. Built with Flask, PostgreSQL for data persistence, and AWS S3 for media storage." data-es="Plataforma social donde los usuarios publican fotos de outfits y la comunidad ayuda a identificar dónde comprar cada prenda. Desarrollada con Flask, PostgreSQL para persistencia y AWS S3 para almacenamiento de media.">Social platform where users post outfit photos and the community helps identify where to buy each piece. Built with Flask, PostgreSQL for data persistence, and AWS S3 for media storage.</p>
+          <div class="chips">
+            <span class="chip chip--sm c-purple">Python</span>
+            <span class="chip chip--sm c-purple">Flask</span>
+            <span class="chip chip--sm c-purple">S3</span>
+            <span class="chip chip--sm c-purple">RDS</span>
+          </div>
+          <div class="proj-foot"><a href="https://github.com/candedefranco/WhereTheFit" target="_blank" rel="noopener" class="link-btn link-btn--violet">git clone →</a></div>
         </div>
-        <div class="pt-3 border-t border-slate-800">
-          <a href="https://github.com/candedefranco/WhereTheFit" target="_blank" class="link-btn--violet link-btn">repo →</a>
-        </div>
-      </div>
+      </article>
 
-      <!-- TruthChain -->
-      <div class="card">
-        <div class="flex items-center justify-between mb-4">
-          <span class="text-xs text-slate-500 uppercase tracking-wider">Cloud & IaC</span>
-          <span class="badge-progress">in progress</span>
+      <!-- SmartTrack -->
+      <article class="term proj">
+        <div class="term-bar">
+          <div class="term-dots"><span></span><span></span><span></span></div>
+          <span class="term-title">~/smarttrack</span>
+          <span class="status status--done" data-en="✓ shipped" data-es="✓ terminado">✓ shipped</span>
         </div>
-        <h3 class="text-lg font-bold text-white mb-2">TruthChain</h3>
-        <p class="text-sm text-slate-400 leading-relaxed mb-4 flex-1" data-en="Multimodal content verification system powered by AI. All infrastructure defined as code with AWS CDK for automated, repeatable deployments." data-es="Sistema de verificación de contenido multimodal con IA. Toda la infraestructura definida como código con AWS CDK para deploys automatizados y repetibles.">Multimodal content verification system powered by AI. All infrastructure defined as code with AWS CDK for automated, repeatable deployments.</p>
-        <div class="flex flex-wrap gap-1.5 mb-4">
-          <span class="tag--emerald tag">AWS CDK</span>
-          <span class="tag--emerald tag">IaC</span>
-          <span class="tag--emerald tag">TypeScript</span>
-          <span class="tag--emerald tag">AI</span>
+        <div class="term-body">
+          <p class="comment"># IoT & Cloud</p>
+          <h3>SmartTrack</h3>
+          <p class="proj-desc" data-en="IoT analytics platform built for a university course. I designed and deployed the entire cloud infrastructure: facial recognition with Rekognition, networking with VPC, and compute with EC2." data-es="Plataforma de analítica IoT desarrollada para un curso universitario. Diseñé y desplegué toda la infraestructura cloud: reconocimiento facial con Rekognition, redes con VPC y cómputo con EC2.">IoT analytics platform built for a university course. I designed and deployed the entire cloud infrastructure: facial recognition with Rekognition, networking with VPC, and compute with EC2.</p>
+          <div class="chips">
+            <span class="chip chip--sm c-blue">Rekognition</span>
+            <span class="chip chip--sm c-blue">EC2</span>
+            <span class="chip chip--sm c-blue">VPC</span>
+          </div>
+          <div class="proj-foot"><span data-en="🔒 private repo" data-es="🔒 repo privado">🔒 private repo</span></div>
         </div>
-        <div class="pt-3 border-t border-slate-800">
-          <span class="text-xs text-slate-600" data-en="private repo" data-es="repo privado">private repo</span>
+      </article>
+
+      <!-- MovieWeb -->
+      <article class="term proj">
+        <div class="term-bar">
+          <div class="term-dots"><span></span><span></span><span></span></div>
+          <span class="term-title">~/movieweb</span>
+          <span class="status status--done" data-en="✓ shipped" data-es="✓ terminado">✓ shipped</span>
         </div>
-      </div>
+        <div class="term-body">
+          <p class="comment"># Databases</p>
+          <h3>MovieWeb</h3>
+          <p class="proj-desc" data-en="IMDB-style web app with full-text search across movies, actors, and directors. Detail pages, keyword-based discovery, and dual database architecture with PostgreSQL and MongoDB." data-es="App web estilo IMDB con búsqueda full-text de películas, actores y directores. Páginas de detalle, descubrimiento por keywords y arquitectura de base de datos dual con PostgreSQL y MongoDB.">IMDB-style web app with full-text search across movies, actors, and directors. Detail pages, keyword-based discovery, and dual database architecture with PostgreSQL and MongoDB.</p>
+          <div class="chips">
+            <span class="chip chip--sm c-purple">Node.js</span>
+            <span class="chip chip--sm c-purple">PostgreSQL</span>
+            <span class="chip chip--sm c-purple">MongoDB</span>
+            <span class="chip chip--sm c-purple">Docker</span>
+          </div>
+          <div class="proj-foot"><a href="https://github.com/Masega360/BaseDatos2025-main" target="_blank" rel="noopener" class="link-btn link-btn--violet">git clone →</a></div>
+        </div>
+      </article>
 
       <!-- Tower Defense -->
-      <div class="card">
-        <div class="flex items-center justify-between mb-4">
-          <span class="text-xs text-slate-500 uppercase tracking-wider">Game Dev</span>
+      <article class="term proj">
+        <div class="term-bar">
+          <div class="term-dots"><span></span><span></span><span></span></div>
+          <span class="term-title">~/tower-defense</span>
+          <span class="status status--done" data-en="✓ shipped" data-es="✓ terminado">✓ shipped</span>
         </div>
-        <h3 class="text-lg font-bold text-white mb-2">Tower Defense</h3>
-        <p class="text-sm text-slate-400 leading-relaxed mb-4 flex-1" data-en="Tower Defense strategy game with multiple levels, enemy types, and upgrade systems. Built applying OOP principles, design patterns, and game state management." data-es="Juego de estrategia Tower Defense con múltiples niveles, tipos de enemigos y sistema de mejoras. Desarrollado aplicando principios de OOP, patrones de diseño y manejo de estado del juego.">Tower Defense strategy game with multiple levels, enemy types, and upgrade systems. Built applying OOP principles, design patterns, and game state management.</p>
-        <div class="flex flex-wrap gap-1.5 mb-4">
-          <span class="tag--amber tag">Java</span>
-          <span class="tag--amber tag">OOP</span>
-          <span class="tag--amber tag">Game Logic</span>
+        <div class="term-body">
+          <p class="comment"># Game Dev</p>
+          <h3>Tower Defense</h3>
+          <p class="proj-desc" data-en="Tower Defense strategy game with multiple levels, enemy types, and upgrade systems. Built applying OOP principles, design patterns, and game state management." data-es="Juego de estrategia Tower Defense con múltiples niveles, tipos de enemigos y sistema de mejoras. Desarrollado aplicando principios de OOP, patrones de diseño y manejo de estado del juego.">Tower Defense strategy game with multiple levels, enemy types, and upgrade systems. Built applying OOP principles, design patterns, and game state management.</p>
+          <div class="chips">
+            <span class="chip chip--sm c-orange">Java</span>
+            <span class="chip chip--sm c-orange">OOP</span>
+            <span class="chip chip--sm c-orange">Game Logic</span>
+          </div>
+          <div class="proj-foot"><span data-en="🔒 private repo" data-es="🔒 repo privado">🔒 private repo</span></div>
         </div>
-        <div class="pt-3 border-t border-slate-800">
-          <span class="text-xs text-slate-600" data-en="private repo" data-es="repo privado">private repo</span>
-        </div>
-      </div>
+      </article>
 
       <!-- Chess & Checkers -->
-      <div class="card">
-        <div class="flex items-center justify-between mb-4">
-          <span class="text-xs text-slate-500 uppercase tracking-wider">Board Games</span>
+      <article class="term proj">
+        <div class="term-bar">
+          <div class="term-dots"><span></span><span></span><span></span></div>
+          <span class="term-title">~/chess-and-checkers</span>
+          <span class="status status--done" data-en="✓ shipped" data-es="✓ terminado">✓ shipped</span>
         </div>
-        <h3 class="text-lg font-bold text-white mb-2">Chess & Checkers</h3>
-        <p class="text-sm text-slate-400 leading-relaxed mb-4 flex-1" data-en="Fully functional Chess and Checkers engines with complete rule validation, turn logic, and move generation. Built with design patterns and efficient data structures." data-es="Motores de Ajedrez y Damas completamente funcionales con validación de reglas, lógica de turnos y generación de movimientos. Desarrollado con patrones de diseño y estructuras de datos eficientes.">Fully functional Chess and Checkers engines with complete rule validation, turn logic, and move generation. Built with design patterns and efficient data structures.</p>
-        <div class="flex flex-wrap gap-1.5 mb-4">
-          <span class="tag">Java</span>
-          <span class="tag">Kotlin</span>
-          <span class="tag">OOP</span>
-          <span class="tag">Data Structures</span>
+        <div class="term-body">
+          <p class="comment"># Board Games</p>
+          <h3>Chess & Checkers</h3>
+          <p class="proj-desc" data-en="Fully functional Chess and Checkers engines with complete rule validation, turn logic, and move generation. Built with design patterns and efficient data structures." data-es="Motores de Ajedrez y Damas completamente funcionales con validación de reglas, lógica de turnos y generación de movimientos. Desarrollado con patrones de diseño y estructuras de datos eficientes.">Fully functional Chess and Checkers engines with complete rule validation, turn logic, and move generation. Built with design patterns and efficient data structures.</p>
+          <div class="chips">
+            <span class="chip chip--sm c-blue">Java</span>
+            <span class="chip chip--sm c-blue">Kotlin</span>
+            <span class="chip chip--sm c-blue">OOP</span>
+            <span class="chip chip--sm c-blue">Data Structures</span>
+          </div>
+          <div class="proj-foot"><span data-en="🔒 private repo" data-es="🔒 repo privado">🔒 private repo</span></div>
         </div>
-        <div class="pt-3 border-t border-slate-800">
-          <span class="text-xs text-slate-600" data-en="private repo" data-es="repo privado">private repo</span>
-        </div>
-      </div>
-
-      <!-- MovieWeb / Cinema -->
-      <div class="card">
-        <div class="flex items-center justify-between mb-4">
-          <span class="text-xs text-slate-500 uppercase tracking-wider">Databases</span>
-        </div>
-        <h3 class="text-lg font-bold text-white mb-2">MovieWeb</h3>
-        <p class="text-sm text-slate-400 leading-relaxed mb-4 flex-1" data-en="IMDB-style web app with full-text search across movies, actors, and directors. Detail pages, keyword-based discovery, and dual database architecture with PostgreSQL and MongoDB." data-es="App web estilo IMDB con búsqueda full-text de películas, actores y directores. Páginas de detalle, descubrimiento por keywords y arquitectura de base de datos dual con PostgreSQL y MongoDB.">IMDB-style web app with full-text search across movies, actors, and directors. Detail pages, keyword-based discovery, and dual database architecture with PostgreSQL and MongoDB.</p>
-        <div class="flex flex-wrap gap-1.5 mb-4">
-          <span class="tag--violet tag">Node.js</span>
-          <span class="tag--violet tag">PostgreSQL</span>
-          <span class="tag--violet tag">MongoDB</span>
-          <span class="tag--violet tag">Docker</span>
-        </div>
-        <div class="pt-3 border-t border-slate-800">
-          <a href="https://github.com/Masega360/BaseDatos2025-main" target="_blank" class="link-btn--violet link-btn">repo →</a>
-        </div>
-      </div>
+      </article>
 
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="pt-8 border-t border-slate-800">
-    <div class="flex gap-6 text-sm">
-      <a href="https://github.com/candedefranco" target="_blank" class="link-btn">GitHub →</a>
-      <a href="https://www.linkedin.com/in/candela-de-franco/" target="_blank" class="link-btn">LinkedIn →</a>
+  <footer class="sec">
+    <h2 class="sec-title">exit</h2>
+    <p class="text-sm" style="color: var(--muted);" data-en="logout — thanks for stopping by ✦" data-es="logout — gracias por pasar ✦">logout — thanks for stopping by ✦</p>
+    <div class="flex flex-wrap gap-6 text-sm mt-4">
+      <a href="https://github.com/candedefranco" target="_blank" rel="noopener" class="link-btn">GitHub →</a>
+      <a href="https://www.linkedin.com/in/candela-de-franco/" target="_blank" rel="noopener" class="link-btn">LinkedIn →</a>
       <a href="mailto:candedefranco@gmail.com" class="link-btn">Email →</a>
     </div>
   </footer>
