@@ -125,6 +125,28 @@
     color: #7dd3fc;
     text-decoration: underline;
   }
+  .social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 0.5rem;
+    background: #111827;
+    border: 1px solid #1e293b;
+    color: #94a3b8;
+    transition: color 0.15s, border-color 0.15s, transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .social-icon svg {
+    width: 1.05rem;
+    height: 1.05rem;
+  }
+  .social-icon:hover {
+    color: #38bdf8;
+    border-color: #38bdf8;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(56, 189, 248, 0.15);
+  }
   .link-btn--violet {
     color: #a78bfa;
   }
